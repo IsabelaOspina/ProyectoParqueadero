@@ -30,7 +30,9 @@ public class Registro {
     public String obtenerTiempoEntrada(Vehiculo vehiculo) {
         for (HashMap<String, Object> entrada : this.entradas) {
             if (entrada.get("vehiculo") == vehiculo) {
+                System.out.println();
                 return (String) entrada.get("tiempoEntrada");
+                
             }
         }
         return null;
