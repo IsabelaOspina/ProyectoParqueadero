@@ -24,6 +24,7 @@ public class ParqueaderoTest {
         Vehiculo vehiculo = new Vehiculo("ABC123", "2022", propietario);
 
         assertEquals(50.0, parqueadero.calcularCosto(vehiculo, 5.0));
+        System.out.println("probando");
     }
 
     @Test
@@ -36,4 +37,6 @@ public class ParqueaderoTest {
 
         assertEquals(10.0, parqueadero.calcularCosto(vehiculo, 1.0));
     }
+
+
 }
