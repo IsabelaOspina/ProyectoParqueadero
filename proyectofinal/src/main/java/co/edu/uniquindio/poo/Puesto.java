@@ -1,38 +1,41 @@
 package co.edu.uniquindio.poo;
 
 public class Puesto {
-    private int i;
-    private int j;
+
+    private int numeroPuesto;
+    private boolean disponible;
     private Vehiculo vehiculo;
 
-    public Puesto(int i, int j) {
-        this.i = i;
-        this.j = j;
-        this.vehiculo = null;
+    public Puesto(int numeroPuesto,boolean disponible, Vehiculo vehiculo) {
+        this.numeroPuesto=numeroPuesto;
+        this.disponible=true;
+        this.vehiculo = vehiculo;
+
     }
 
-    public boolean estaDisponible() {
-        return this.vehiculo == null;
-    }
-
-    public boolean ocupar(Vehiculo vehiculo) {
-        if (this.estaDisponible()) {
-            this.vehiculo = vehiculo;
-            return true;
+    public void cambiarEstado(){
+        if(this.disponible){
+            this.disponible = false;
         }
-        return false;
+        else{
+            this.disponible = true;
+        }
     }
 
-    public void desocupar() {
-        this.vehiculo = null;
+    public int getNumeroPuesto() {
+        return numeroPuesto;
     }
 
-    public int getI() {
-        return i;
+    public void setNumeroPuesto(int numeroPuesto) {
+        this.numeroPuesto = numeroPuesto;
     }
 
-    public void setJ(int j) {
-        this.j = j;
+    public boolean isDisponible() {
+        return disponible;
+    }
+
+    public void setDisponible(boolean disponible) {
+        this.disponible = disponible;
     }
 
     public Vehiculo getVehiculo() {
@@ -40,9 +43,10 @@ public class Puesto {
     }
 
     public void setVehiculo(Vehiculo vehiculo) {
-        this.vehiculo=vehiculo;
+        this.vehiculo = vehiculo;
+       
     }
-        
+    
 }
 
 
