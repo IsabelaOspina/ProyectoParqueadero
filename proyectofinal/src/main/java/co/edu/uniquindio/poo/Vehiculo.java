@@ -6,11 +6,11 @@ public class Vehiculo {
     private Propietario propietario;
     private Puesto puesto;
 
-    public Vehiculo(String placa, String modelo, Propietario propietario) {
+    public Vehiculo(String placa, String modelo, Propietario propietario, Puesto puesto) {
         this.placa = placa;
         this.modelo = modelo;
         this.propietario = propietario;
-        this.puesto = null;
+        this.puesto = puesto;
     }
 
     public String getPlaca() {
